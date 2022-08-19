@@ -2,43 +2,58 @@ import LogoIcon from '../CoreUI/HeaderIcons/LogoIcon';
 import MenuIcon from '../CoreUI/HeaderIcons/MenuIcon';
 import DownArrowIcon from '../CoreUI/HeaderIcons/DownArrowIcon';
 import WebIcon from '../CoreUI/HeaderIcons/webIcon';
+import WebDownArrowIcon from '../CoreUI/HeaderIcons/WebDownArrowIcon';
+import { useState } from 'react';
 
 export default function Header() {
+    const Links = [
+        { name: 'Courses', link: '/' },
+        { name: 'Universities', link: '/' },
+        { name: 'Features', link: '/' },
+        { name: 'Tools', link: '/' },
+        { name: 'Resources', link: '/' },
+    ];
+
+    const [open, setOpen] = useState(false);
     return (
-        <div className="shadow-sm bg-transparent w-full fixed top-0 left-0">
-            <header className=" lg:px-12 lg:py-21px xl:px-12 xl:py-21px md:flex bg-transparent md:px-10 space-x-8 flex justify-between items-center py-6 px-5">
+        <div className="shadow-sm w-full sticky z-50 top-0 bg-transparent">
+            <header className="lg:px-12 lg:py-21px xl:px-12 xl:py-21px md:flex md:px-10 space-x-8 flex justify-between items-center py-6 px-5 container mx-auto">
                 <div>
                     <LogoIcon />
                 </div>
+                <div
+                    onClick={() => setOpen(!open)}
+                    className="text-3xl absolute right-3 top-3 cursor-pointer lg:hidden block"
+                >
+                    <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
+                </div>
                 <div className="flex space-x-8">
                     <div className=" flex">
-                        <ul className="flex space-x-8 items-center">
-                            <li className="nav-menu">Courses</li>
-                            <li className="nav-menu">Universities</li>
-                            <li className="flex items-center space-x-3">
-                                <span className="nav-menu">Features</span>
-                                <DownArrowIcon />
-                            </li>
-                            <li className="flex items-center space-x-3">
-                                <span className="nav-menu">Tools</span>
-                                <DownArrowIcon />
-                            </li>
-                            <li className="flex items-center space-x-3">
-                                <span className="nav-menu">Resources</span>
-                                <DownArrowIcon />
-                            </li>
-                            <li className="flex items-center space-x-3">
+                        <ul
+                            className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white lg:bg-transparent lg:space-x-7 md:z-auto -z-1 left-0 w-full md:w-auto md:px-0 px-4 lg:pl-0
+                ${open ? 'top-16 opacity-100' : '-top-[490px] md:opacity-100 opacity-0'}`}
+                        >
+                            {Links.map((link) => (
+                                <li key={link.name} className="md:ml-4 text-xl font-bold md:my-0 my-7">
+                                    <a href={link.link} className="text-gray-800">
+                                        {link.name}
+                                    </a>
+                                </li>
+                            ))}
+                            <li className="lg:flex items-center space-x-3 hidden">
                                 <WebIcon />
-                                <span className="text-slate-600 font-light text-base tracking-wide">English</span>
-                                <DownArrowIcon />
+                                <span className="cursor-pointer text-slate-600 font-light text-base tracking-wide">
+                                    English
+                                </span>
+                                <WebDownArrowIcon />
                             </li>
                             <li>
-                                <button className="text-pink-500 bg-white py-4 px-8 text-sm font-bold leading-3 rounded-2xl shadow-md shadow-pink-200">
-                                    Login
+                                <button className="text-pink-500 bg-white w-full lg:w-auto py-4 mb-7 lg:mb-0 px-8 text-sm font-bold leading-3 rounded-2xl shadow-md shadow-pink-200 hover:shadow-md hover:shadow-pink-100">
+                                    LogIn
                                 </button>
                             </li>
                             <li>
-                                <button className="bg-pink-500 text-white py-4 px-7 text-sm font-bold leading-3 rounded-2xl">
+                                <button className="bg-pink-500 text-white  w-full lg:w-auto py-4 px-7 text-sm font-bold leading-3 rounded-2xl hover:shadow-md hover:shadow-pink-100">
                                     Signup
                                 </button>
                             </li>

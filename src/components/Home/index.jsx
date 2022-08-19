@@ -1,9 +1,13 @@
 import Banner from './Banner';
+import EasySection from './EasySection';
+import GlobalSearch from './GlobalSearch';
 
 const Home = () => {
     return (
-        <div className="bg-gradient-to-r from-red-50 via-white to-violet-50 w-full h-screen">
+        <div>
             <Banner />
+            <EasySection />
+            <GlobalSearch />
         </div>
     );
 };

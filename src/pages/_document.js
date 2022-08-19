@@ -4,7 +4,7 @@ export default function Document() {
     return (
         <Html>
             <Head />
-            <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/metropolis" type="text/css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css" />
             <body>
                 <Main />
                 <NextScript />

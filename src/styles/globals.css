@@ -6,9 +6,27 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'MetropolisRegular';
+  font-family: 'Metropolis';
 }
 
 .nav-menu {
-  @apply text-stone-700 font-bold text-base tracking-wide;
+  @apply cursor-pointer text-stone-700 font-bold text-base tracking-wide;
+}
+
+.banner-bg-red {
+   background: rgba(255, 118, 179, 0.2);
+   filter: blur(45px);
+}
+
+.banner-bg-violet {
+  background: rgba(131, 108, 214, 0.2);
+  filter: blur(45px);
+}
+
+.banner-heading {
+  line-height: 65px;
+}
+
+.input-shadow {
+  box-shadow: 0px 9px 16px 0px #f1e9f9;
 }
