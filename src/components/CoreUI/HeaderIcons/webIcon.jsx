@@ -1,4 +1,4 @@
-export default function WebIcon() {
+const WebIcon = () => {
     return (
         <div>
             <svg
@@ -16,4 +16,5 @@ export default function WebIcon() {
             </svg>
         </div>
     );
-}
+};
+export default WebIcon;

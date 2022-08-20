@@ -1,0 +1,8 @@
+const RectangleIcon = () => {
+    return (
+        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="29" height="29" fill="#FFAE28" />
+        </svg>
+    );
+};
+export default RectangleIcon;

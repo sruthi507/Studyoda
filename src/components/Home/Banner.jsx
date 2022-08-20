@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import SearchIcon from '../CoreUI/BannerIcons/SearchIcon';
 
-export default function Banner() {
+const Banner = () => {
     return (
         <section>
             <div className="banner-bg-red absolute -top-48 -left-20 z-0 w-full h-[594px] rounded-full lg:w-[594px] px-3"></div>
@@ -37,4 +37,6 @@ export default function Banner() {
             </div>
         </section>
     );
-}
+};
+
+export default Banner;

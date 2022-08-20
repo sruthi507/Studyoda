@@ -12,6 +12,12 @@ module.exports = {
                 431: '431px',
                 760: '760px',
                 5.5: '5.5rem',
+                50: '50px',
+            },
+            colors: {
+                'global-search-bg': '#F8F7FE',
+                'global-search-discription-bg': ' #5F6981',
+                'calculator-discription-color': '#5F6981',
             },
         },
     },

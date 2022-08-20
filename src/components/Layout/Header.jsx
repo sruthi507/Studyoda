@@ -1,11 +1,9 @@
 import LogoIcon from '../CoreUI/HeaderIcons/LogoIcon';
-import MenuIcon from '../CoreUI/HeaderIcons/MenuIcon';
-import DownArrowIcon from '../CoreUI/HeaderIcons/DownArrowIcon';
 import WebIcon from '../CoreUI/HeaderIcons/webIcon';
 import WebDownArrowIcon from '../CoreUI/HeaderIcons/WebDownArrowIcon';
 import { useState } from 'react';
 
-export default function Header() {
+const Header = () => {
     const Links = [
         { name: 'Courses', link: '/' },
         { name: 'Universities', link: '/' },
@@ -16,8 +14,8 @@ export default function Header() {
 
     const [open, setOpen] = useState(false);
     return (
-        <div className="shadow-sm w-full sticky z-50 top-0 bg-transparent">
-            <header className="lg:px-12 lg:py-21px xl:px-12 xl:py-21px md:flex md:px-10 space-x-8 flex justify-between items-center py-6 px-5 container mx-auto">
+        <div className="shadow-sm w-full sticky z-50 top-0 header-bg-transparent">
+            <header className="lg:px-12 lg:py-21px xl:px-12 xl:py-21px space-x-8 flex justify-between items-center py-1 px-5 container mx-auto">
                 <div>
                     <LogoIcon />
                 </div>
@@ -30,11 +28,11 @@ export default function Header() {
                 <div className="flex space-x-8">
                     <div className=" flex">
                         <ul
-                            className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white lg:bg-transparent lg:space-x-7 md:z-auto -z-1 left-0 w-full md:w-auto md:px-0 px-4 lg:pl-0
-                ${open ? 'top-16 opacity-100' : '-top-[490px] md:opacity-100 opacity-0'}`}
+                            className={`lg:flex items-center lg:pb-0 pb-12 absolute lg:static bg-white lg:bg-transparent lg:space-x-7 lg:z-auto -z-1 left-0 w-full lg:w-auto lg:px-0 px-4 lg:pl-0
+                ${open ? 'top-20 opacity-100' : '-top-[490px] lg:opacity-100 opacity-0'}`}
                         >
                             {Links.map((link) => (
-                                <li key={link.name} className="md:ml-4 text-xl font-bold md:my-0 my-7">
+                                <li key={link.name} className="md:ml-4 text-base font-bold my-7 md:my-7">
                                     <a href={link.link} className="text-gray-800">
                                         {link.name}
                                     </a>
@@ -63,4 +61,6 @@ export default function Header() {
             </header>
         </div>
     );
-}
+};
+
+export default Header;

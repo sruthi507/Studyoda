@@ -1,6 +1,8 @@
 import Banner from './Banner';
 import EasySection from './EasySection';
 import GlobalSearch from './GlobalSearch';
+import Calculator from './Calculator';
+import Technology from './Technology';
 
 const Home = () => {
     return (
@@ -8,6 +10,8 @@ const Home = () => {
             <Banner />
             <EasySection />
             <GlobalSearch />
+            <Calculator />
+            <Technology />
         </div>
     );
 };
