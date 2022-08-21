@@ -3,7 +3,7 @@ import RightArrowIcon from '../CoreUI/GlobalSearchIcons/RightArrowIcon';
 
 const Technology = () => {
     return (
-        <section className="container mx-auto lg:max-w-screen-xl my-12 p-5 lg:my-28">
+        <section className="container mx-auto lg:max-w-screen-xl my-12 p-5 lg:my-12">
             <div className="bg-teal-50 text-center py-16 lg:py-[80px] lg:px-20 lg:space-x-20 mb-4 relative rounded-[50px] lg:flex">
                 <div className="w-auto lg:w-1/2 mx-4 lg:mx-0">
                     <Image

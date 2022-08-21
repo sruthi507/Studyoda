@@ -35,6 +35,19 @@ body {
   background: hsla(0,0%,100%,.2);
 }
 
+.navbar {
+  @apply shadow-sm w-full sticky z-50 top-0 header-bg-transparent;
+}
+
+.navbar .scroll {
+  background: white;
+}
+
 .calculator-animation {
   transform: translateX(9.036px) translateY(7.788px);
+}
+
+.notes-bg-blue {
+  background: rgba(0, 209, 255, 0.14);
+  filter: blur(72px);
 }

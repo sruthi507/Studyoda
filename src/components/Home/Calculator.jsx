@@ -9,7 +9,7 @@ import CloseIcon from '../CoreUI/CalculatorIcons/CloseIcon';
 
 const calculator = () => {
     return (
-        <section className="container mx-auto lg:max-w-screen-xl my-16 px-5 lg:my-28">
+        <section className="container mx-auto lg:max-w-screen-xl my-12 px-5 lg:my-12">
             <div className="bg-pink-50 text-center py-[80px] mb-4 relative rounded-[50px]">
                 <h4 className="font-extrabold text-base text-pink-400 uppercase mb-4">Tools</h4>
                 <h1 className="font-extrabold text-[40px] mb-3">German Grade Calculator</h1>

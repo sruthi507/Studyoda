@@ -7,14 +7,41 @@ const Header = () => {
     const Links = [
         { name: 'Courses', link: '/' },
         { name: 'Universities', link: '/' },
-        { name: 'Features', link: '/' },
-        { name: 'Tools', link: '/' },
-        { name: 'Resources', link: '/' },
+        { name: 'Features', submenu: 'true', sublinks:[
+            {name: 'submenu', link: '/'},
+            {name: 'submenu', link: '/'},
+            {name: 'submenu', link: '/'},
+            {name: 'submenu', link: '/'},
+        ],link: '/' },
+        { name: 'Tools', submenu: 'true', sublinks:[
+            {name: 'submenu', link: '/'},
+            {name: 'submenu', link: '/'},
+            {name: 'submenu', link: '/'},
+            {name: 'submenu', link: '/'},
+        ],link: '/' },
+        { name: 'Resources', submenu: 'true', sublinks:[
+            {name: 'submenu', link: '/'},
+            {name: 'submenu', link: '/'},
+            {name: 'submenu', link: '/'},
+            {name: 'submenu', link: '/'},
+        ],link: '/' },
     ];
 
     const [open, setOpen] = useState(false);
+    const [navbar, setNavbar] = useState(false);
+
+    // const changeBackground = () =>{
+    //     if(window.scrollY >= 90){
+    //         setNavbar(true);
+    //     }else{
+    //         setNavbar(false)
+    //     }
+    //     console.log (window.scrollY);
+    // }
+
+    // window.addEventListener('scroll',changeBackground);
     return (
-        <div className="shadow-sm w-full sticky z-50 top-0 header-bg-transparent">
+        <nav className="shadow-sm w-full sticky z-50 top-0 header-bg-transparent">
             <header className="lg:px-12 lg:py-21px xl:px-12 xl:py-21px space-x-8 flex justify-between items-center py-1 px-5 container mx-auto">
                 <div>
                     <LogoIcon />
@@ -28,15 +55,17 @@ const Header = () => {
                 <div className="flex space-x-8">
                     <div className=" flex">
                         <ul
-                            className={`lg:flex items-center lg:pb-0 pb-12 absolute lg:static bg-white lg:bg-transparent lg:space-x-7 lg:z-auto -z-1 left-0 w-full lg:w-auto lg:px-0 px-4 lg:pl-0
+                            className={`lg:flex items-center lg:pb-0 pb-12 absolute lg:static bg-white lg:bg-transparent lg:space-x-9 lg:z-auto -z-1 left-0 w-full lg:w-auto lg:px-0 px-4 lg:pl-0
                 ${open ? 'top-20 opacity-100' : '-top-[490px] lg:opacity-100 opacity-0'}`}
                         >
                             {Links.map((link) => (
-                                <li key={link.name} className="md:ml-4 text-base font-bold my-7 md:my-7">
+                                <li key={link.name} className="flex items-center space-x-2 md:ml-4 text-base font-bold my-7 md:my-7">
                                     <a href={link.link} className="text-gray-800">
                                         {link.name}
                                     </a>
+                                    <WebDownArrowIcon />
                                 </li>
+                               
                             ))}
                             <li className="lg:flex items-center space-x-3 hidden">
                                 <WebIcon />
@@ -59,7 +88,7 @@ const Header = () => {
                     </div>
                 </div>
             </header>
-        </div>
+        </nav>
     );
 };
 
