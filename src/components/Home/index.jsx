@@ -4,6 +4,8 @@ import GlobalSearch from './GlobalSearch';
 import Calculator from './Calculator';
 import Technology from './Technology';
 import CreateTask from './CreateTask';
+import MobileApp from './MobileApp';
+import Blog from './Blog';
 
 const Home = () => {
     return (
@@ -14,6 +16,8 @@ const Home = () => {
             <Calculator />
             <Technology />
             <CreateTask />
+            <Blog />
+            <MobileApp />
         </div>
     );
 };

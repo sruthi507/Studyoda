@@ -51,3 +51,22 @@ body {
   background: rgba(0, 209, 255, 0.14);
   filter: blur(72px);
 }
+
+.footer-tools {
+  @apply flex items-center space-x-3 font-semibold cursor-pointer hover:bg-footer-li-hover-bg p-1 hover:p-1 hover:rounded-md;
+}
+
+.mobileApp-bg {
+  background: linear-gradient(89.53deg, #ECC4FA -1.62%, #CADDFF 104.3%);
+  box-shadow: 0px 20px 74px rgba(255, 255, 255, 0.45);
+}
+
+.copyright-bg {
+  background: linear-gradient(0deg, #333333, #333333), #E1E9FD;
+  } 
+
+
+  .slick-slide {
+    margin-left: 10px;
+    margin-right: 17px;
+  }

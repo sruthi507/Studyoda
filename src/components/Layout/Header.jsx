@@ -7,24 +7,39 @@ const Header = () => {
     const Links = [
         { name: 'Courses', link: '/' },
         { name: 'Universities', link: '/' },
-        { name: 'Features', submenu: 'true', sublinks:[
-            {name: 'submenu', link: '/'},
-            {name: 'submenu', link: '/'},
-            {name: 'submenu', link: '/'},
-            {name: 'submenu', link: '/'},
-        ],link: '/' },
-        { name: 'Tools', submenu: 'true', sublinks:[
-            {name: 'submenu', link: '/'},
-            {name: 'submenu', link: '/'},
-            {name: 'submenu', link: '/'},
-            {name: 'submenu', link: '/'},
-        ],link: '/' },
-        { name: 'Resources', submenu: 'true', sublinks:[
-            {name: 'submenu', link: '/'},
-            {name: 'submenu', link: '/'},
-            {name: 'submenu', link: '/'},
-            {name: 'submenu', link: '/'},
-        ],link: '/' },
+        {
+            name: 'Features',
+            submenu: 'true',
+            sublinks: [
+                { name: 'submenu', link: '/' },
+                { name: 'submenu', link: '/' },
+                { name: 'submenu', link: '/' },
+                { name: 'submenu', link: '/' },
+            ],
+            link: '/',
+        },
+        {
+            name: 'Tools',
+            submenu: 'true',
+            sublinks: [
+                { name: 'submenu', link: '/' },
+                { name: 'submenu', link: '/' },
+                { name: 'submenu', link: '/' },
+                { name: 'submenu', link: '/' },
+            ],
+            link: '/',
+        },
+        {
+            name: 'Resources',
+            submenu: 'true',
+            sublinks: [
+                { name: 'submenu', link: '/' },
+                { name: 'submenu', link: '/' },
+                { name: 'submenu', link: '/' },
+                { name: 'submenu', link: '/' },
+            ],
+            link: '/',
+        },
     ];
 
     const [open, setOpen] = useState(false);
@@ -59,13 +74,15 @@ const Header = () => {
                 ${open ? 'top-20 opacity-100' : '-top-[490px] lg:opacity-100 opacity-0'}`}
                         >
                             {Links.map((link) => (
-                                <li key={link.name} className="flex items-center space-x-2 md:ml-4 text-base font-bold my-7 md:my-7">
+                                <li
+                                    key={link.name}
+                                    className="flex items-center space-x-2 md:ml-4 text-base font-bold my-7 md:my-7"
+                                >
                                     <a href={link.link} className="text-gray-800">
                                         {link.name}
                                     </a>
                                     <WebDownArrowIcon />
                                 </li>
-                               
                             ))}
                             <li className="lg:flex items-center space-x-3 hidden">
                                 <WebIcon />

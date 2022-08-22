@@ -19,7 +19,7 @@ const calculator = () => {
                 </p>
                 <Image
                     className="object-cover"
-                    src="/Calculator/frame-img.jpg"
+                    src="/images/calculator/frame-img.jpg"
                     alt="frame-img"
                     width={787}
                     height={502}

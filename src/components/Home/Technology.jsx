@@ -8,7 +8,7 @@ const Technology = () => {
                 <div className="w-auto lg:w-1/2 mx-4 lg:mx-0">
                     <Image
                         className="object-cover rounded-xl"
-                        src="/Technology/frame-img.png"
+                        src="/images/technology/frame-img.png"
                         alt="frame-img"
                         width={625}
                         height={454}

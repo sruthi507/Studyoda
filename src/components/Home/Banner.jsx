@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import SearchIcon from '../CoreUI/BannerIcons/SearchIcon';
 
 const Banner = () => {
     return (
@@ -9,7 +8,7 @@ const Banner = () => {
             <div className="container px-5 lg:px-0 lg:max-w-screen-xl mx-auto flex flex-col lg:flex-row">
                 <Image
                     className="!pt-16 object-contain"
-                    src="/Banner/student-img.png"
+                    src="/images/banner/student-img.png"
                     alt="student-img"
                     width={370}
                     height={670}

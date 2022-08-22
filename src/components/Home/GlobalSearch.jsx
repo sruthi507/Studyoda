@@ -24,8 +24,8 @@ const GlobalSearch = () => {
                 </div>
                 <div className="w-auto lg:w-1/2 flex justify-center">
                     <Image
-                        className="object-contain"
-                        src="/GlobalSearch/global-search-img.png"
+                        className="images/object-contain"
+                        src="/globalSearch/global-search-img.png"
                         alt="frame-img"
                         width={565}
                         height={454}
